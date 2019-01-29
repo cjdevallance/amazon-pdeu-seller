@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Amazon Prime Day Advertising</title>
+
+<style>
+
+@font-face
+		{font-family: "Amazon Ember";
+		src: url("fonts/Amazon-Ember-Regular.ttf") format("truetype");}
+
+@font-face
+		{font-family: "Amazon Ember Bold";
+		src: url("fonts/Amazon-Ember-Bold.ttf") format("truetype");}
+
+@font-face
+		{font-family: "Amazon Ember Light";
+		src: url("fonts/Amazon-Ember-Light.ttf") format("truetype");}
+
+@font-face
+		{font-family: "Helvetica Neue";
+		src: url("fonts/HelveticaNeue.ttf") format("truetype");}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+		{font-size: 100%;
+		font: inherit;
+		margin: 0;
+		padding: 0;
+		vertical-align: baseline;
+		border: 0;}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+		{display: block;}
+*
+		{box-sizing: border-box;}
+
+html, body
+		{width: 100%;
+		height: 100%;}
+
+body
+		{font: 1em "Amazon Ember", Arial, sans-serif;}
+
+h1
+		{font: 210%/120% "Amazon Ember Bold", Arial, sans-serif;
+		letter-spacing: 1px;
+		color: #222f3e;
+		padding-bottom: 20px;}
+
+h2
+		{font: 140% "Amazon Ember", Arial, sans-serif;
+		letter-spacing: 0.5px;
+		color: #222f3e;}
+
+h3
+		{font: 190%/120% "Amazon Ember Bold", Arial, sans-serif;
+		letter-spacing: 1px;
+		color: #222f3e;
+		padding-bottom: 25px;}
+
+h4
+		{font: 95% "Amazon Ember Bold", Arial, sans-serif;}
+
+p
+		{font: 100% "Amazon Ember", Arial, sans-serif;}
+
+a
+		{text-decoration: none;
+		color: #fff;}
+
+a:hover
+		{text-decoration: underline;}
+
+i
+		{font-style: italic;}
+
+b
+		{font-weight: bold;}
+
+ol, ul
+		{list-style: none;}
+
+blockquote, q
+		{line-height: 130%;
+		margin-left: 25px;
+		quotes: none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after
+		{content: '';
+		content: none;}
+
+table
+		{border-collapse: collapse;
+		border-spacing: 0;}
+
+img, object, embed, video
+		{max-width: 100%;}
+
+.clearfix
+		{width: 100%;
+		clear: both;}
+
+/* ---------------- */
+
+header section
+		{width: 100%;
+		background-color: #222f3e;}
+
+.logo
+		{vertical-align: middle;}
+
+nav
+		{font: 11px "Amazon Ember Light", Arial, sans-serif;
+		text-transform: lowercase;
+		color: #fff;}
+
+header li
+		{list-style: none;
+		padding-left: 15px;
+		display: inline-block;}
+
+button
+		{font: 100% 'Amazon Ember', Arial, sans-serif;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		
+		color: #fff;
+		margin: 55px 0 20px;
+		padding: 20px 40px;
+		background-color: #ff9902;
+		cursor: pointer;
+		border-radius: 4px;
+		border: 0;}
+
+a button
+		{text-decoration: none;}
+
+a button:hover
+		{background-color: #eb8e02;
+		text-decoration: none;}
+
+/* welcome */
+
+.welcome
+		{width: 100%;
+		height: auto;
+		background: url('images/header-photo.jpg') no-repeat;
+		background-size: cover;}
+
+/* end welcome */
+
+/* impact */
+
+.grid2 p
+		{font: 110%/150% 'Amazon Ember', Arial, sans-serif;
+		padding-bottom: 50px;
+		display: block;}
+
+.orange-arrow
+		{max-width: 319px;
+		height: 94px;
+		background: url('images/orange-arrow.png') no-repeat;
+		background-size: contain;
+		padding: 24px 0px 0 40px;
+		display: block;
+		position: relative;}
+
+.rainbow-graphic img
+		{width: 100%;
+		max-width: 248px;
+		max-height: 130px;
+		margin: 0;
+		padding: 0;
+		vertical-align: bottom;
+		display: block;
+		position: relative;}
+
+.rainbow-graphic2
+		{width: 100%;
+		max-height: 147px;
+		vertical-align: top;}
+
+.chair-graphic img
+		{width: 100%;
+		max-width: 248px;
+		max-height: 130px;
+		vertical-align: bottom;
+		display: block;
+		position: relative;}
+
+.chair-graphic2
+		{width: 100%;
+		max-height: 147px;
+		vertical-align: top;}
+
+.impact-button
+		{width: 100%;
+		margin: 0 auto;}
+
+.impact-button .button-container
+		{width: 100%;
+		text-align: center;
+		margin: 0 auto;
+		padding: 0 10% 50px;
+		display: block;
+		position: relative;}
+
+.impact-button button
+		{width: auto;
+		padding: 20px 30px;
+		display: block;}
+
+.impact-button a:hover
+		{text-decoration: none;}
+
+.impact-button .signin
+		{color: #666;}
+
+/* end impact */
+
+/* tips */
+
+.tips
+		{padding: 70px 50px;
+		background-color: #85d8e4;}
+
+.tips h2
+		{font: 190% 'Amazon Ember Bold', Arial, sans-serif;
+		padding-bottom: 25px;}
+
+.tips .headline-img
+		{width: auto;
+		padding: 0 7px 5px 0;
+		vertical-align: middle;
+		display: inline-block;}
+
+.tips .headline
+		{width: 70%;
+		font: 150% 'Amazon Ember', Arial, sans-serif;
+		vertical-align: middle;
+		display: inline-block;}
+
+.tips .subhead
+		{font: 180% 'Amazon Ember Light', Arial, sans-serif;
+		vertical-align: top;
+		display: inline-block;}
+
+.tips ul
+		{list-style-type: none;
+		padding: 0;
+		margin: 0;}
+
+.tips li
+		{background: url('images/checkmark.png') no-repeat 18px 10px;
+		padding: 0 0 20px 70px;
+		display: block;}
+
+.text
+		{font: 80%/140% 'Amazon Ember', Arial, sans-serif;
+		padding-bottom: 20px;
+		vertical-align: top;
+		display: inline-block;}
+
+/* end tips */
+
+/* p-details */
+
+.readiness .half
+		{width: 100%;
+		height: auto;
+		background: url('images/middle-photo.jpg') no-repeat;
+		background-size: cover;}
+
+.readiness .subhead
+		{font: 120% 'Amazon Ember', Arial, sans-serif;}
+
+/* end readiness */
+
+/* resources */
+
+.resources
+		{text-align: center;
+		color: #fff;
+		background-color: #222f3e;
+		margin: 0 auto;
+		padding: 70px 50px;}
+
+.resources .title
+		{font: 190% 'Amazon Ember Light', Arial, sans-serif;
+		letter-spacing: 1px;
+		padding-bottom: 30px;}
+
+.resources .table
+		{width: 50%;
+		font: 140% 'Amazon Ember Light', Arial, sans-serif;
+		color: #85d8e4;
+		margin: 0 auto;}
+
+.resources .table .left
+		{width: 63%;
+		letter-spacing: 1px;
+		vertical-align: top;
+		display: inline-block;}
+
+.resources .table .right
+		{width: 35%;
+		letter-spacing: 1px;
+		vertical-align: top;
+		display: inline-block;}
+
+.resources ul li
+		{line-height: 170%;
+		list-style: disc;
+		text-align: left;}
+
+.resources a
+		{text-decoration: none;
+		color: #85d8e4;}
+
+.resources a:hover
+		{text-decoration: underline;
+		color: #85d8e4;}
+
+.signin
+		{font: italic 70% 'Helvetica Neue', Arial, sans-serif;
+		letter-spacing: 0.5px;}
+
+/* end resources */
+
+/* footer */
+
+.footer
+		{width: 100%;
+		font: 60% 'Helvetica Neue', Arial, sans-serif;
+		letter-spacing: 0.25px;
+		text-align: center;
+		padding: 25px 50px;}
+
+/* end footer */
+
+/* media queries */
+
+@media screen and ( min-width: 768px ) {
+
+.logo
+		{width: 40%;
+		text-align: left;
+		padding: 15px 50px 5px;
+		display: inline-block;}
+
+nav
+		{width: 59%;
+		text-align: right;
+		padding: 0 50px 0 0;
+		display: inline-block;}
+
+/* welcome */
+
+.welcome
+		{min-height: 386px;}
+
+.text-block-1
+		{width: 530px;
+		padding: 8% 50px 0;}
+
+/* end welcome */
+
+/* impact */
+
+.impact
+		{width: 100%;
+		padding: 50px 50px 0;
+		display: grid;
+		grid-template-columns: auto 33% 33%;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 
+		"grid1 grid1 grid1"
+		"grid2 grid3 grid4";}
+
+.impact .grid1
+		{grid-area: grid1;
+		padding-bottom: 10px;
+		display: block;
+		position: relative;}
+
+.impact .grid2
+		{grid-area: grid2;
+		vertical-align: top;
+		display: inline-block;
+		position: relative;}
+
+.impact .grid3
+		{grid-area: grid3;
+		height: 100%;
+		display: inline-block;
+		position: relative;}
+
+.inner-float-left
+		{float: right;}
+
+.inner-float-right
+		{float: left;}
+
+.impact .grid4
+		{grid-area: grid4;
+		height: 100%;
+		display: inline-block;
+		position: relative;}
+
+/* end impact */
+
+/* readiness */
+
+.readiness
+		{display: grid;
+		grid-template-columns: 38% 62%;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+		"half half_last";}
+
+.half
+		{grid-area: half;
+		display: inline-block;}
+
+.half_last
+		{grid-area: half_last;
+		padding: 70px 0 50px 50px;
+		display: inline-block;}
+
+.half img
+		{display: none;}
+
+.headline
+		{width: 91%;}
+
+.headline-img
+		{width: 8%;}
+
+.tips .subhead
+		{width: 15%;}
+
+.text
+		{width: 90%;}
+
+.tips .gridbox
+		{display: grid;
+		grid-template-columns: 52% 43%;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas: 
+		"gridbox1 gridbox3"
+		"gridbox2 gridbox4";}
+
+.gridbox1
+		{grid-area: gridbox1;}
+
+.gridbox2
+		{grid-area: gridbox2;}
+
+.gridbox3
+		{grid-area: gridbox3;
+		padding: 20px 0;}
+
+.gridbox4
+		{grid-area: gridbox4;}
+
+}
+
+@media screen and ( max-width: 767px ) {
+
+.logo
+		{width: 100%;
+		text-align: center;
+		padding: 10px 15px;
+		display: block;}
+
+nav
+		{width: 100%;
+		text-align: center;
+		padding: 10px 15px;
+		display: block;}
+
+header li
+		{padding: 0 5px;}
+
+/* welcome */
+
+.welcome
+		{background-position: 60% 100%;}
+
+.text-block-1
+		{width: 55%;
+		padding: 10%;}
+
+/* end welcome */
+
+/* impact */
+
+.impact
+		{width: 100%;
+		padding: 10% 10% 0;
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas: 
+		"grid1 grid1 grid1"
+		"grid2 grid2 grid2"
+		"grid3 grid3 grid3"
+		"grid4 grid4 grid4";}
+
+.impact .grid1
+		{grid-area: grid1;}
+
+.impact .grid2
+		{grid-area: grid2;
+		vertical-align: top;
+		display: block;}
+
+.impact .grid2 p
+		{padding-bottom: 30px;}
+
+.orange-arrow
+		{width: 100%;
+		max-width: 317px;
+		background-size: 100%;
+		margin: 0 auto;}
+
+.impact .grid3
+		{grid-area: grid3;
+		height: 100%;
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+		position: relative;}
+
+.inner-float-left, .inner-float-right
+		{padding-top: 20px;
+		float: none;}
+
+.impact .grid4
+		{grid-area: grid4;
+		height: 100%;
+		right: 20px;
+		text-align: center;
+		margin: 0 auto;
+		display: block;
+		position: relative;}
+
+/* end impact */
+
+/* tips */
+
+.tips
+		{padding: 10%;}
+
+.tips .headline
+		{padding-bottom: 10px;}
+
+.tips .subhead
+		{width: 15%;}
+
+.tips .text
+		{width: 100%;
+		padding-top: 5px;}
+
+.tips .gridbox
+		{display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas: 
+		"gridbox1 gridbox1"
+		"gridbox2 gridbox2"
+		"gridbox3 gridbox3"
+		"gridbox4 gridbox4";}
+
+.gridbox1
+		{grid-area: gridbox1;}
+
+.gridbox2
+		{grid-area: gridbox2;}
+
+.gridbox3
+		{grid-area: gridbox3;
+		padding: 10px 0;}
+
+.gridbox4
+		{grid-area: gridbox4;}
+
+/* end tips */
+
+/* readiness */
+
+.half_last
+		{margin: 0;
+		padding: 10%;}
+
+.readiness img
+		{width: 100%;}
+
+/* end readiness */
+
+/* resources */
+
+.resources
+		{padding: 10%;}
+
+.resources .title
+		{font-size: 170%;}
+
+.resources .table
+		{width: 80%;}
+
+/* end resources */
+
+}
+
+@media screen and ( max-width: 600px ) {
+
+.text-block-1
+		{width: 100%;}
+
+.resources .table .left
+		{width: 100%;}
+
+.resources .table .right
+		{width: 100%;}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION SECTION -->
+
+<header>
+
+	<section>
+
+		<div class="logo">
+			<a href="#"><img src="images/logo.png" alt="Amazon Sponsored Products"></a>
+		</div>
+
+		<nav>
+			<ul>
+			<li><a href="#impact">Prime Day Impact</a></li>
+			<li><a href="#tips">Tips</a></li>
+			<li><a href="#readiness">Retail Readiness</a></li>
+			<li><a href="#resources">Resources</a></li>
+			</ul>
+		</nav>
+
+	</section>
+
+</header>
+
+<!-- END NAVIGATION SECTION -->
+
+<!-- WELCOME SECTION -->
+
+<section class="welcome">
+
+	<div class="text-block-1">
+
+		<h1>Winning Prime Day 2018 with Amazon Advertising</h1>
+
+		<h2>Your guide to maximize sales during one of Amazon's biggest shopping events of the year</h2>
+
+	</div>
+
+</section>
+
+<!-- END WELCOME SECTION -->
+
+<!-- IMPACT SECTION -->
+
+<a id="impact"></a>
+
+<section class="impact">
+
+	<div class="grid1">
+		<h3>How impactful Prime Day can be to your business:</h3>
+	</div>
+
+	<div class="grid2">
+
+		<p>Advertisers investing in advertising for Prime Day have the opportunity to take advantage of significant traffic and sales opportunities.</p>
+
+		<div class="orange-arrow"></div>
+
+	</div>
+
+	<div class="grid3">
+
+		<div class="inner-float-left">
+
+			<div class="rainbow-graphic"><img src="images/rainbow-graphic.png" alt="Tens of millions of purchases"></div>
+
+			<div class="rainbow-graphic2"><img src="images/rainbow-graphic2.png" alt="Tens of millions of purchases"></div>
+
+		</div>
+
+	</div>
+
+	<div class="grid4">
+
+		<div class="inner-float-right">
+
+			<div class="chair-graphic"><img src="images/chair-graphic.png" alt="Tens of millions of customers"></div>
+
+			<div class="chair-graphic2"><img src="images/chair-graphic2.png" alt="Tens of millions of customers"></div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<section class="impact-button">
+
+	<div class="button-container">
+		<center><a href="#"><button>Optimize your campaigns today</button></a></center>
+
+		<div class="signin">sign-in required</div>
+
+	</div>
+
+</section>
+
+<!-- END IMPACT SECTION -->
+
+<!-- TIPS SECTION -->
+
+<a id="tips"></a>
+
+<section class="tips">
+
+	<h2>Prime Day Specific Tips</h2>
+
+	<div class="gridbox">
+
+		<div class="gridbox1">
+
+			<div class="headline-img">
+				<img src="images/target-graphic.png" alt="Overall Strategy">
+			</div>
+
+			<div class="headline">
+				Overall Strategy
+			</div>
+
+		</div>
+
+		<div class="gridbox2">
+
+			<ul>
+			<li class="text">Use Sponsored Products, Headline Search Ads, and Amazon Stores (only available for brand owners) <b>all together</b> to help maximize your visibility.</li>
+
+			<li class="text"><b>Launch Prime Day campaigns at least 2 weeks in advance</b>, download your performance reports and adjust your campaigns as needed.</li>
+
+			<li class="text"><b>Advertise all products with 3.5+ stars</b> to continue driving sales of your highest rated ASINs.</li>
+			</ul>
+
+		</div>
+
+		<div class="gridbox3">
+
+			<h4>Don't miss these opportunities:</h4>
+
+		</div>
+
+		<div class="gridbox4">
+
+			<div class="text"><b>Review your performance reports at least once every 2 weeks.</b> Gather new insights and use that data to inform your campaign optimizations.</div>
+
+			<div class="text"><b>Save your reports after Prime Day</b> and leverage this year's learnings for next year's event.</div>
+
+			<div class="text"><b>Maximize your impressions.</b> Make sure you're set up to win the Buy Box, your keywords are relevant, andyour bids are high enough.</div>
+
+		</div>
+
+	</div>
+
+	<br>
+	<br>
+
+	<div class="gridbox">
+
+		<div class="gridbox1">
+
+			<div class="headline-img">
+				<img src="images/magnifying-glass-graphic.png" alt="Keyword Strategy">
+			</div>
+
+			<div class="headline">
+				Keyword Strategy
+			</div>
+
+		</div>
+
+		<div class="gridbox2">
+
+			<ul>
+			<li class="text"><b>Group similar products together</b> so you can align your keywords to those ASINs. Don't forget that keywords/products relevancy is a key aspect in your campaign's success.</li>
+
+			<li class="text"><b>Use a mix of keyword match types</b> to improve keyword coverage—broad match provides the widest traffic exposure while phrase and exact match are more restrictive but will drive highly relevant traffic.</li>
+
+			<li class="text"><b>Add negative keywords</b> to ensure your ad is not triggered for certain keywords and to help prevent irrelevant traffic.</li>
+			</ul>
+
+		</div>
+
+		<div class="gridbox3">
+
+			<h4>Don't miss these opportunities:</h4>
+
+		</div>
+
+		<div class="gridbox4">
+
+			<div class="text"><b>Harvest search terms from your auto campaigns.</b> After your automatic campaigns are running for at least 2 weeks, review your search term report for successful search terms and add them as keywords to manual campaigns.</div>
+
+			<div class="text"><b>Segment your products into separate campaigns.</b> The more you segment your products, the more targeted you can make your keywords. Highly relevant keywords will increase your ads' chances of winning auctions and appearing in better search result placements.</div>
+
+		</div>
+
+	</div>
+
+	<br>
+	<br>
+
+	<div class="gridbox">
+
+		<div class="gridbox1">
+
+			<div class="headline-img">
+				<img src="images/money-graphic.png" alt="Budget & Bidding Strategy">
+			</div>
+
+			<div class="headline">
+				Budget & Bidding Strategy
+			</div>
+
+		</div>
+
+		<div class="gridbox2">
+
+			<ul>
+			<li class="text"><b>Increase your daily budgets</b> so you don't risk running out of budget throughout the day. You can read just your budgets at any time after Prime Day.</li>
+
+			<li class="text"><b>Increase your bids</b> to maintain visibility in prominent placements during peak traffic and to help capture the lift in impressions.</li>
+
+			<li class="text"><b>Turn on Bid+</b> for manual Sponsored Products campaigns to optimize your bids for top of search results. This feature helps your ads be more competitive, resulting in more impressions, clicks, and sales.</li>
+			</ul>
+
+		</div>
+
+		<div class="gridbox3">
+
+			<h4>Don't miss these opportunities:</h4>
+
+		</div>
+
+		<div class="gridbox4">
+
+			<div class="text"><b>Be sure your budget can accommodate your bids.</b> If your keyword bids are greater than your campaign budget, you might not serve an impression. You can monitor your ad spend in Campaign Manager, and adjust your bids or budget at any time.</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!-- END TIPS SECTION -->
+
+<!-- READINESS SECTION -->
+
+<a id="readiness"></a>
+
+<section class="readiness">
+
+	<div class="half"><img src="images/middle-photo.jpg" alt="Get your product detail pages retail-ready"></div>
+
+	<div class="half_last">
+
+		<h3>Get your product detail pages retail-ready</h3>
+
+		<div class="subhead">Title</div>
+		<p class="text">Create a title between 50 and 100 characters with your most relevant keywords and product information. Don't include promotional messaging, keyword stuffing, or words in ALL CAPs.</p>
+
+		<div class="subhead">Bullets</div>
+		<p class="text">Feature 3 to 5 bullets under 120 characters each with customer benefits, product uses, and compatibility information.</p>
+
+		<div class="subhead">Keywords</div>
+		<p class="text">Include targeted keywords in the Generic Keywords field. Consider how frequently customers are searching for these keywords and which pages are currently ranking highest for the searches.</p>
+
+		<div class="subhead">Images</div>
+		<p class="text">In addition to your main images of the product on a white background, add 2 to 5 alternate, high-resolution images to highlight product features, lifestyle use cases, and other details.</p>
+
+		<div class="subhead">Product description</div>
+		<p class="text">Write a product description with major product features and warranty information that's under 500 characters.</p>
+
+	</div>
+
+</section>
+
+<!-- END READINESS DETAILS SECTION -->
+
+<!-- RESOURCES SECTION -->
+
+<a id="resources"></a>
+
+<section class="resources">
+
+	<div class="title">For more campaign tips and best practices, access our optimization resources all year long:</div>
+
+	<div class="table">
+
+		<div class="left">
+			<ul>
+			<li><a href="#">Advertising Checklist</a></li>
+			<li><a href="#">Webinar Links</a></li>
+			</ul>
+		</div>
+
+		<div class="right">
+			<ul>
+			<li><a href="#">Help Page</a></li>
+			<li><a href="#">Infographic</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<a href="#"><button>Optimize your campaigns today</button></a>
+
+	<div class="signin">sign-in required</div>
+
+</section>
+
+<!-- END RESOURCES SECTION -->
+
+<!-- FOOTER SECTION -->
+
+<section class="footer">
+
+	©2018 Amazon.com Inc. or its affiliates. All rights reserved.<br>
+	Amazon Services Europe S.à r.l., 5 Rue Plaetis, L-2338 Luxembourg, Registered in Luxembourg No. B-93815, Share Capital 37.500 EUR, Business License Number: 100416, Luxembourg VAT Reg. No. LU 19647148
+
+</section>
+
+<!-- END FOOTER SECTION -->
+
+</body>
+</html>
