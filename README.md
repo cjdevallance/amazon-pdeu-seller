@@ -1,1 +1,1 @@
-# amazon-pdeu-seler
+# amazon-pdeu-seller
